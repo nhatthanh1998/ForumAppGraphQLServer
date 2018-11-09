@@ -1,0 +1,25 @@
+#import * from '../scalar/type.graphql'
+#import * from '../posts/type.graphql'
+
+type UserType {
+    _id:MongoID
+    username:String,
+    displayName:String,
+    role:String,
+    fullName:String,
+    posts:[Post],
+    createdAt:Long
+}
+input UserInput {
+    _id:MongoID
+    username:String,
+    displayName:String,
+    role:String,
+    fullName:String,
+    createdAt:Long
+}
+
+input LoginInput {
+    username:String,
+    password:String
+}

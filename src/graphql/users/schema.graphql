@@ -1,0 +1,13 @@
+# import * from 'type.graphql' 
+# import * from '../scalar/type.graphql'
+type Query {
+    currentUser(token:String):UserType,
+    users(criteria:UserInput = {},skip:Int,limit:Int):[UserType],
+    user(_id:MongoID):UserType
+}
+
+type Mutation {
+    registerUser(userInput:UserInput):String,
+    updateUser(userInput:UserInput):UserType,
+    login(userInput:LoginInput):String
+}

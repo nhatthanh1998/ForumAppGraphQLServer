@@ -1,0 +1,3 @@
+# import Query.*,Mutation.*,Subscription.* from './posts/schema.graphql'
+# import Query.*,Mutation.* from './users/schema.graphql'
+# import Query.*,Mutation.*,Subscription.* from './comments/schema.graphql' 

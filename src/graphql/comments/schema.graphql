@@ -1,0 +1,16 @@
+#import * from './type.graphql'
+#import * from '../scalar/type.graphql'
+type Query  {
+    comments(criteria:CommentInput={},limit:Int,skip:Int):[Comment],
+}
+type Mutation {
+    addComment(comment:CommentInput):Comment,
+    updateComment(comment:CommentInput):Comment,
+    deleteComment(comment:CommentInput):Comment
+}
+
+type Subscription {
+    commentAdded(postID:MongoID):Comment,
+    commentUpdated(postID:MongoID):Comment,
+    commentDeleted(postID:MongoID):Comment
+}

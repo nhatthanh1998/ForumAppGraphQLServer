@@ -1,0 +1,19 @@
+# import * from '../scalar/type.graphql'
+# import * from '../users/type.graphql'
+#import * from '../posts/type.graphql'
+type Comment {
+    _id:MongoID,
+    content:String!,
+    createdAt:Long,
+    author:UserType,
+    post:Post
+}
+
+input CommentInput {
+    _id:MongoID,
+    content:String,
+    createdAt:Long,
+    author:String,
+    post:String,
+    token:String
+}

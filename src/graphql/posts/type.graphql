@@ -1,0 +1,34 @@
+# import * from '../users/type.graphql'
+# import * from '../scalar/type.graphql'
+# import * from '../comments/type.graphql'
+
+type Post {
+    _id:MongoID,
+    title:String,
+    content:String,
+    createdAt:Long,
+    author:UserType,
+    comments:[Comment]
+}
+
+input QueryPostsInput {
+    _id:MongoID,
+    title:String,
+    content:String,
+    createdAt:Long,
+    authorID:String
+}
+input QueryPostInput {
+    _id:MongoID
+}
+input MutationPostInput {
+    title:String,
+    content:String,
+    token:String,
+    _id:MongoID
+}
+
+input DeletePostInput {
+    token:String,
+    postID:MongoID
+}
